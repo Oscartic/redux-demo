@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+}
+
+.btnContainer {
+display: inline-block;
+margin: 0.1rem;
+}
+.card {
+  display: table-column;
+  background-color: #1a212a;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 1rem 0;
+  width: 400px;
+  border: 1px solid #777;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px #777;
+  overflow: hidden;
+}
+.card strong {
+  font-size: 5rem;
+
+  list-style: none;
+}
+.title {
+  font-weight: 800;
+  color: #1b212a;
+}
+.product :last-child {
+  border-bottom: none;
+}
+.button {
+  cursor: pointer;
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+button.button:hover {
+  background-color: #bbc2cd;
+  color: #1b212a;
+}

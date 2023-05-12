@@ -50,3 +50,7 @@ button.button:hover {
   background-color: #bbc2cd;
   color: #1b212a;
 }
+
+.option-state {
+  max-width: 200px;
+}

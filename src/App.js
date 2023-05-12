@@ -2,11 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Accumulator from './Components/Accumulator'
 import Btn from './Components/Btn'
+import Redux from './images/redux.png'
 import './App.css';
 
 function App(props) {
   return (
     <main className="main">
+       <img src={Redux} alt="Zustand logo" className="option-state"/>
       <h1 className="title">CountApp with Redux</h1>
       <div className="card">
         <Accumulator count={props.count}/>

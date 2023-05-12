@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import { composeWithDevTools } from '@redux-devtools/extension';
 
 const initialState = { count: 0 };
 
@@ -15,7 +16,7 @@ function counterReducer(state = initialState, action) {
       return state;
   }
 }
-
-const store = createStore(counterReducer);
+// requires implementing a middleware for side effects
+const store = createStore(counterReducer, composeWithDevTools());
 
 export default store;

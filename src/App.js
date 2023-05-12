@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Accumulator from './Components/Accumulator'
 import Btn from './Components/Btn'
+import React from './images/react.png'
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   }
   return (
     <main className="main">
+      <img src={React} alt="Zustand logo" className="option-state"/>
     <h1 className="title">CountApp</h1>
     <div className="card">
       <Accumulator count={count}/>

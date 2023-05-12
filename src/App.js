@@ -1,30 +1,35 @@
-import { useState } from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 import Accumulator from './Components/Accumulator'
 import Btn from './Components/Btn'
 import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  const incrementHandler = () => {
-    setCount(prevState => prevState + 1);
-  }
-  const decrementHandler = () => {
-    if (count <= 0) return;
-    setCount(prevState => prevState - 1);
-  }
+function App(props) {
   return (
     <main className="main">
-    <h1 className="title">CountApp</h1>
-    <div className="card">
-      <Accumulator count={count}/>
-      <div className="btnContainer">
-        <Btn handler={decrementHandler} text="-"/>
-        <Btn handler={incrementHandler} text="+"/>
+      <h1 className="title">CountApp with Redux</h1>
+      <div className="card">
+        <Accumulator count={props.count}/>
+        <div className="btnContainer">
+          <Btn handler={props.decrement} text="-"/>
+          <Btn handler={props.increment} text="+"/>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    count: state.count
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    increment: () => dispatch({ type: 'INCREMENT' }),
+    decrement: () => dispatch({ type: 'DECREMENT' })
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

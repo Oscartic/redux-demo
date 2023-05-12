@@ -11,6 +11,7 @@ display: inline-block;
 margin: 0.1rem;
 }
 .card {
+  color: antiquewhite !important;
   display: table-column;
   background-color: #1a212a;
   text-align: center;
@@ -22,19 +23,21 @@ margin: 0.1rem;
   box-shadow: 0 0 5px #777;
   overflow: hidden;
 }
+.card h2 {
+  color: #fff;
+}
 .card strong {
   font-size: 5rem;
-
+  color: #fff;
   list-style: none;
 }
 .title {
   font-weight: 800;
   color: #1b212a;
 }
-.product :last-child {
-  border-bottom: none;
-}
 .button {
+  background-color: #414954;
+  color: #fff;
   cursor: pointer;
   margin: 0 0.2rem;
   padding: 0.5rem;
